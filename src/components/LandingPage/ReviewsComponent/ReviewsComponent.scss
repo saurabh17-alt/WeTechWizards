@@ -1,0 +1,160 @@
+#reviews {
+    padding: 1rem;
+    margin-top: 1rem;
+
+    .reviews-container {
+
+        .reviews-header {
+            h2 {
+                color: #292E34;
+                text-align: center;
+                font-size: 2.5rem;
+            }
+
+            p {
+                margin: 10px 15%;
+                width: 70%;
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+
+        .reviews-main {
+            margin-top: 2rem;
+            .carousel {
+                position: relative;
+                width: 80%;
+                // max-width: 600px;
+                margin: auto;
+                overflow: hidden;
+                border-radius: 10px;
+                // background-color: #f9f9f9;
+                background: linear-gradient(90deg, rgba(73,204,249,1) 8%, rgba(123,104,238,1) 95%);
+                padding: 2rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+                .carousel-inner {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    /* Smooth transition */
+
+                    .carousel-slide {
+                        min-width: 100%;
+                        box-sizing: border-box;
+                        text-align: center;
+
+                        .review-text {
+                            font-style: italic;
+                            margin-bottom: 10px;
+                            // color: #555;
+                            color: #292E34;
+                            font-size: 1.8rem;
+                        }
+
+                        .review-desc{
+                            margin: 0 15%;
+                            width: 70%;
+                            text-wrap: wrap;
+                            text-align: center;
+                            font-size: 1rem;
+                            margin-bottom: 15px;
+                        }
+
+                        .review-author {
+                            font-weight: bold;
+                            color: #333;
+                            margin-bottom: 10px;
+                        }
+
+                        .review-image {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .carousel-button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                    z-index: 10;
+                }
+
+                .carousel-button.prev {
+                    left: 10px;
+                }
+
+                .carousel-button.next {
+                    right: 10px;
+                }
+
+                .carousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    .dot {
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 5px;
+                        background-color: #ccc;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .dot.active {
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 992px) { 
+    #reviews {
+
+        .reviews-container {
+            
+            .reviews-header {
+
+                p {
+                    margin: 10px 5%;
+                    width: 90%;
+                }
+            } 
+
+            .reviews-main {
+
+                .carousel {
+                    width: 90%;
+                    padding: 1rem 0;
+
+                    .carousel-inner {
+                        .carousel-slide {
+                            .review-text {
+                                font-size: 1.2rem;
+                            }
+
+                            .review-desc {
+                                margin: 0 10%;
+                                width: 80%;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
